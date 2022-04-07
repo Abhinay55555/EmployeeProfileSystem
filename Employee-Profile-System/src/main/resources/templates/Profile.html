@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>Profile Page</title>
+</head>
+<body style="background-color: aqua;"
+<div align="center">
+    <h1>Employee Profile Details</h1>
+    <br />
+    <form action="#" th:action="@{/save}" th:object="${EmployeeDetails}"
+          method="post">
+
+        <table border="0" cellpadding="10">
+            <tr>
+                <td>Employee Code:</td>
+                <td><input type="text" th:field="*{id}" /></td>
+            </tr>
+
+            <tr>
+                <td>Employee FirstName:</td>
+                <td><input type="text" th:field="*{employee firstname}" /></td>
+            </tr>
+            <tr>
+                <td>Employee LastName:</td>
+                <td><input type="text" th:field="*{employee lastname}" /></td>
+            </tr>
+            <tr>
+                <td>Employee Date of Birth:</td>
+                <td><input type="text" th:field="*{location}" /></td>
+                
+            </tr>
+            <tr>
+                <td>Employee Email:</td>
+                <td><input type="text" th:field="*{Email}" /></td>
+    
+            </tr>
+    
+            <tr>
+                <td>Employee Mobile Number:</td>
+                <td><input type="Number" th:field="*{Mobile Number}" /></td>
+    
+            </tr>
+            <tr>
+                <td>Employee Salary:</td>
+                <td><input type="Number" th:field="*{Salary}" /></td>
+    
+            </tr>
+                <tr>
+                    <td colspan="2"><button type="submit">Save</button> </td>
+                </tr>
+        </table>
+    </form>
+
+
+
+        
+       
+
+<script>  
+    function validate(){  
+      
+      
+    if (firstname==""){  
+      alert("Name can't be blank");  
+      return false;  
+    }else if(password.length<6){  
+      alert("Password must be at least 6 characters long.");  
+      return false;  
+      }  
+    }  
+    </script>  
+
+
+        }
+
+
+
+</div>
+</body>
+</html>

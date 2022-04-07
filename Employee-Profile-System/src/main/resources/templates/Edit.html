@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>Edit Employee</title>
+</head>
+<body style="background-color: aqua;">
+<div align="center">
+    <h1>Edit Employee</h1>
+    <br />
+    <form action="#" th:action="@{/save}" th:object="${EmployeeDetails}"
+          method="post">
+
+        <table border="2" cellpadding="5">
+            <tr>
+                <td>Employee Code:</td>
+                <td><input type="text" th:field="*{code}" /></td>
+            </tr>
+            <tr>
+                <td>Employee First Name:</td>
+                <td>
+                    <input type="text" th:field="*{employee firstname}" />
+                </td>
+            </tr>
+            <tr>
+                <td>Employee Last Name:</td>
+                <td><input type="text" th:field="*{Employee Last Name}" /></td>
+            </tr>
+            <tr>
+                <td>Employee Date of Birth:</td>
+                <td><input type="text" th:field="*{Date of Birth}" /></td>
+            </tr>
+            <tr>
+                <td>Employee Date of Joining:</td>
+                <td><input type="text" th:field="*{Date of Joining}" /></td>
+            </tr>
+
+        <tr>
+            <td>Employee Email:</td>
+            <td><input type="text" th:field="*{Email}" /></td>
+
+        </tr>
+
+        <tr>
+            <td>Employee Mobile Number:</td>
+            <td><input type="Number" th:field="*{Mobile Number}" /></td>
+
+        </tr>
+        <tr>
+            <td>Employee Salary:</td>
+            <td><input type="Number" th:field="*{Salary}" /></td>
+
+        </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Save</button> </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

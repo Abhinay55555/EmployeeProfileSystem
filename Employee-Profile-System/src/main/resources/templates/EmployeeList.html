@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8"/>
+  <title> Employee Profile System</title>
+</head>
+<body>
+<div align="center">
+  <h1>Employee List</h1>
+  <a href="Add.html">Add New Employee</a>
+  <br/><br/>
+  <table border="1" cellpadding="10">
+    <thead>
+    <tr>
+      <th>Employee Code</th>
+      <th>Employee Name</th>
+      <th>Employee Date of Joining</th>
+      <th>Employee Mobile Number</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="employeeDetails : ${employeeDetails}">
+      <td th:text="${employeeDetails.id">Employee Code</td>
+      <td th:text="${employeeDetails.name}">Employee Name</td>
+      <td th:text="${employeeDetails.department}">Department</td>
+      <td th:text="${employeeDetails.location}">Location</td>
+      <td>
+        <a href="edit.html">Edit</a>
+        &nbsp;&nbsp;&nbsp;
+        <a th:href="@{'/delete/' + ${employeeDetails.id}}">Delete</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
